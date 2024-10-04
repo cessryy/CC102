@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-	string name;
+	int age;
 	cout << "Enter your age: ";
-	cin >> name;
+	cin >> age;
 	cout << "Thank You!";
 	return 0;
 }

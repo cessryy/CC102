@@ -17,6 +17,6 @@ int main()
     double distance_x = x2 - x1;
     double distance_y = y2 - y1;
     double distance = sqrt(pow(distance_x, 2) + pow(distance_y, 2));
-    cout << "The distance between the points is: " << distance << endl;
+    cout << "The distance between the points is: " << distance;
     return 0;
 }

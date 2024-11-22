@@ -8,19 +8,16 @@ int main() {
     bool parent;
     cout << "Enter age: ";
     cin >> age;
-    if (age < 13) {
+    string ratings = "G, PG";  
+    if (age >= 16) ratings += ", R";  
+    if (age < 16) {
         cout << "With parent? ";
         cin >> parent;
-        cout << (parent ? "G, PG" : "G") << endl;
-    } else if (age < 16) {
-        cout << "With parent? ";
-        cin >> parent;
-        cout << (parent ? "G, PG, R" : "G, PG") << endl;
-    } else {
-		cout << "G, PG, R" << endl;
-	}
+        if (!parent) ratings = "G";  
+    }
+    cout << ratings << endl;
     cout << "Enter money: ";
     cin >> money;
-    cout << (money < 7.5 ? "Not enough money." : (money < 10.5 ? "Matinee"  : "Matinee & Evening"));
+    cout << (money < 7.5 ? "Not enough money." : (money < 10.5 ? "Matinee" : "Matinee & Evening"));
     return 0;
 }

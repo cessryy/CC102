@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
@@ -11,7 +12,6 @@ int main() {
     cout << "Enter 3rd symbol to use (*, $, @): ";
     cin >> symbol3;
     cout << "You picked: " << symbol1 << " " << symbol2 << " " << symbol3 << endl;
-
     // f:
     cout << "f:" << endl;
     for (int i = 0; i < 10; i++) {
@@ -24,7 +24,6 @@ int main() {
         }
         cout << endl;
     }
-
     // :g
     cout << "g:" << endl;
     for (int i = 0; i < 5; i++) {
@@ -36,7 +35,6 @@ int main() {
         }
         cout << endl; 
     }
-
     // h: (combined symbol1 and symbol2)
    cout << "h:" << endl;
     for (int i = 1; i <= 6; i++) {
@@ -59,32 +57,35 @@ int main() {
         }
         cout << symbol2 << endl;
     }
-
     // i: (symbol1, symbol2, symbol3 combined)
-    cout << "i:" << endl;
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < i; j++) {
-            cout << symbol2;
+   for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 1; j++) {
+            cout << "          ";
+            for (int k = 0; k < i; k++) {
+                cout << "^";
+            }
         }
-        cout << symbol3 << endl;
+        cout << "*" << endl;
     }
 
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 10; j++) {
-            cout << symbol1;
+            cout << "#";
         }
         for (int j = 0; j < 5; j++) {
-            cout << symbol2;
+            cout << "^";
         }
-        cout << symbol3 << endl;
+        cout << "*" << endl;
     }
 
     for (int i = 4; i >= 0; i--) {
-        for (int j = 0; j < i; j++) {
-            cout << symbol2;
+        for (int j = 0; j < 1; j++) {
+            cout << "          ";
+            for (int k = 0; k < i; k++) {
+                cout << "^";
+            }
         }
-        cout << symbol3 << endl;
+        cout << "*" << endl;
     }
-
     return 0;
 }
